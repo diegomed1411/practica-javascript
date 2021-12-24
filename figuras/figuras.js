@@ -1,14 +1,17 @@
 //formulas cuadrado
 console.group("Cuadrado");
 
-const ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden: "+ladoCuadrado+"cm");
+//const ladoCuadrado = 5;
+//console.log("Los lados del cuadrado miden: "+ladoCuadrado+"cm");
 
-const perimetroCuadrado = ladoCuadrado *4;
+const perimetroCuadrado= (lado)=> lado*4;  
+
 console.log("El perimetro del cuadrado es: "+perimetroCuadrado+"cm");
 
-const areaCuadrado = ladoCuadrado*ladoCuadrado;
-console.log("El área del cuadrado es: "+areaCuadrado+"cm2");
+//const areaCuadrado = ladoCuadrado*ladoCuadrado;
+//console.log("El área del cuadrado es: "+areaCuadrado+"cm2");
+
+const areaCuadrado= (lado) => lado * lado;
 
 console.groupEnd();
 
@@ -23,7 +26,7 @@ const alturaTriangulo = 5;
 console.log("Los lados del triangulo miden: "+ ladoTriangulo1 + "cm, " + ladoTriangulo2 + "cm, y la base "+baseTriangulo+ "cm" );
 
 const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log("el perimetro del triangulo es: "+perimetroTriangulo+"cm");
+console.log("El perimetro del triangulo es: "+perimetroTriangulo+"cm");
 
 const areaTriangulo = (baseTriangulo*alturaTriangulo)/2;
 console.log("El área del triangulo es de: "+areaTriangulo+"cm2");
