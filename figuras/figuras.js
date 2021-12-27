@@ -56,16 +56,53 @@ console.log("El perimetro del circulo es: "+perimetroCirculo+"cm")
 console.log("El area del circulo es: "+areaCirculo+"cm2")
 console.groupEnd()
 
+//validacion de campos
+function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+}
+
 // interaccion con HTML
+
+// funciones de calculo de cuadrado 
 
 function calcularPerimetroCuadrado() {
     const inputCuadrado = document.getElementById("InputCuadrado");
     const valorInputCuadrado = inputCuadrado.value;
-    resultadoCuadrado.innerHTML = "El perímetro es: "+perimetroCuadrado(valorInputCuadrado)+" cm";
+    if (isEmpty(valorInputCuadrado)) {
+        alert("Debe ingresar la medida del lado");
+    } else {
+    resultadoCuadrado.innerHTML = "El perímetro es: "+perimetroCuadrado(valorInputCuadrado)+" cm";}
 }
 
 function calcularAreaCuadrado(){
     const inputCuadrado = document.getElementById("InputCuadrado");
     const valorInputCuadrado = inputCuadrado.value;
-    resultadoCuadrado.innerHTML = "El área es: "+ areaCuadrado(valorInputCuadrado)+" cm2";
+    if (isEmpty(valorInputCuadrado)) {
+        alert("Debe ingresar la medida del lado");
+    } else {
+    resultadoCuadrado.innerHTML = "El área es: "+ areaCuadrado(valorInputCuadrado)+" cm2";}
+}
+
+// funciones de calculo de triangulo 
+
+const inputLadoUnoTriangulo = document.getElementById("InputLadoUnoTriangulo");
+const valorLadoUnoTriangulo = inputLadoUnoTriangulo.value;
+const inputLadoDosTriangulo = document.getElementById("InputLadoDosTriangulo");
+const valorLadoDosTriangulo = inputLadoUnoTriangulo.value;
+const inputBaseTriangulo = document.getElementById("InputBaseTriangulo");
+const valorBaseTriangulo = inputBaseTriangulo.value;
+const inputAlturaTriangulo = document.getElementById("InputAlturaTriangulo");
+const valorAlturaTriangulo = inputAlturaTriangulo.value;
+
+function calcularPerimetroTriangulo(){
+const inputLadoUnoTriangulo = document.getElementById("InputLadoUnoTriangulo");
+const valorLadoUnoTriangulo = parseFloat(inputLadoUnoTriangulo.value);
+const inputLadoDosTriangulo = document.getElementById("InputLadoDosTriangulo");
+const valorLadoDosTriangulo = parseFloat(inputLadoUnoTriangulo.value);
+const inputBaseTriangulo = document.getElementById("InputBaseTriangulo");
+const valorBaseTriangulo = parseFloat(inputBaseTriangulo.value);
+    if (isEmpty(valorBaseTriangulo)|| isEmpty(valorLadoUnoTriangulo) || isEmpty(valorLadoDosTriangulo)) {
+        alert("Debe ingresar la medida Lado 1, Lado 2 y Base");
+    } else {
+        resultadoTriangulo.innerHTML = "El perímetro es: "+ perimetroTriangulo(valorLadoUnoTriangulo, valorLadoDosTriangulo, valorBaseTriangulo)+" cm";}
 }
