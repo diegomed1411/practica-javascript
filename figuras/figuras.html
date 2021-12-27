@@ -9,31 +9,46 @@
 </head>
 <body>
     <header>
-        <h1>Figuras Geometricas</h1>
+    <h1>Figuras Geometricas</h1>
     <p>Calcula perimetro y áreas de distintas figuras geométricas</p>
-    </header>
-
-    <section>
-        <h2>Calcula el área y perímetro de un cuadrado</h2>
-        <form action="">
-            <label for="">Escribe cuanto mide cada lado de tu cuadrado</label>
-            <input type="number">
-            <button>Calcular el perímetro</button>
-            <button>Calcular el área</button>
-        </form>
-    </section>
-
-    
+    </header>  
+    <main> 
 
 <div class="container">
     <div class="brand-logo"></div>
     <div class="brand-title">CUADRADO</div>
     <div class="inputs">
-      <label>MEDIDA DEL LADO</label>
-      <input type="number" placeholder="Indique la cantidad de CM" />
-      <button type="submit">LOGIN</button>
+      <form>
+      <label for="InputCuadrado">MEDIDA DEL LADO</label>
+      <input id= "InputCuadrado" type="number" placeholder="medida de lado" />
+      <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+      <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+      <p id="resultadoCuadrado"></p>
+      </form>
     </div>
 </div>
+
+    <div class="container">
+        <div class="triangulo-equilatero-bottom-left"></div>
+        <div class="brand-title">TRIANGULO</div>
+        <div class="inputs">          
+          <form>
+          <label for="InputBaseTriangulo">MEDIDA DE LA BASE</label>  
+          <input id= "InputBaseTriangulo" type="number" placeholder="medida de base" />
+          <label for="InputLadoUnoTriangulo">MEDIDA DE LADO 1</label>  
+          <input id= "InputLadoUnoTriangulo" type="number" placeholder="medida de lado 1" />
+          <label for="InputLadoDosTriangulo">MEDIDA DE LADO 2</label>  
+          <input id= "InputLadoDosTriangulo" type="number" placeholder="medida de lado 2" />
+          <label for="InputAlturaTriangulo">MEDIDA DE ALTURA</label>  
+          <input id= "InputAlturaTriangulo" type="number" placeholder="medida de altura" />
+          <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
+          <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+          <p id="resultadoTriangulo"></p>
+          </form>
+        </div>
+    </div>
+</main>
+
 
 
 

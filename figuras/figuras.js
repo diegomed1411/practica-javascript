@@ -56,3 +56,16 @@ console.log("El perimetro del circulo es: "+perimetroCirculo+"cm")
 console.log("El area del circulo es: "+areaCirculo+"cm2")
 console.groupEnd()
 
+// interaccion con HTML
+
+function calcularPerimetroCuadrado() {
+    const inputCuadrado = document.getElementById("InputCuadrado");
+    const valorInputCuadrado = inputCuadrado.value;
+    resultadoCuadrado.innerHTML = "El perímetro es: "+perimetroCuadrado(valorInputCuadrado)+" cm";
+}
+
+function calcularAreaCuadrado(){
+    const inputCuadrado = document.getElementById("InputCuadrado");
+    const valorInputCuadrado = inputCuadrado.value;
+    resultadoCuadrado.innerHTML = "El área es: "+ areaCuadrado(valorInputCuadrado)+" cm2";
+}
