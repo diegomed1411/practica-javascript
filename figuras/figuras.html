@@ -10,7 +10,7 @@
 <body>
     <header>
     <h1>Figuras Geometricas</h1>
-    <p>Calcula perimetro y áreas de distintas figuras geométricas</p>
+    <p>Calcula perímetro y áreas de distintas figuras geométricas</p>
     </header>  
     <main> 
 
@@ -22,7 +22,7 @@
       <label for="InputCuadrado">MEDIDA DEL LADO</label>
       <input id= "InputCuadrado" type="number" placeholder="medida de lado" />
       <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
-      <button type="button" onclick="calcularAreaCuadrado()">Calcular el area</button>
+      <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
       <p id="resultadoCuadrado"></p>
       </form>
     </div>
@@ -42,11 +42,26 @@
           <label for="InputAlturaTriangulo">MEDIDA DE ALTURA</label>  
           <input id= "InputAlturaTriangulo" type="number" placeholder="medida de altura" />
           <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
-          <button type="button" onclick="calcularAreaTriangulo()">Calcular el area</button>
+          <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
           <p id="resultadoTriangulo"></p>
           </form>
         </div>
     </div>
+
+    <div class="container">
+        <div class="circulo-logo"></div>
+        <div class="brand-title">CIRCULO</div>
+        <div class="inputs">
+          <form>
+          <label for="InputCirculo">MEDIDA DEL RADIO</label>
+          <input id= "InputCirculo" type="number" placeholder="medida del radio" />
+          <button type="button" onclick="calcularPerimetroCirculo()">Calcular el perimetro</button>
+          <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button>
+          <p id="resultadoCirculo"></p>
+          </form>
+        </div>
+    </div>
+    
 </main>
 
 

@@ -146,3 +146,12 @@ main {
   box-shadow: -7px 7px 10px #cbced1, -7px 7px 10px white;
 }
 
+.circulo-logo {
+  height: 70px;
+  width: 70px;
+  margin: auto;
+  border-radius: 100%;
+  box-sizing: border-box;
+  background-color: #1DA1F2;
+  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
