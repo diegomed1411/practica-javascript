@@ -8,21 +8,11 @@ function isEmpty(val){
 
 //----------------------------------------------------------------------------------------------------
 //incorporando cupones
-const coupons=[
-    {
-        name: "cupon15",
-        discount: 15,
-    },
-    {
-        name: "cupon30",
-        discount: 30,
-    },
-    {
-        name: "cupon45",
-        discount: 45,
-    },
-
-]
+const coupons={
+    'CUPON15': 15,
+    'CUPON30': 30,
+    'CUPON45': 45,
+}
 // Interaccion con HTML y cáclulo 
 
 function calcularPrecioConDescuento(){
@@ -38,4 +28,20 @@ function calcularPrecioConDescuento(){
     "arroja un precio final de: "+ precioConDescuento(priceValue, discountValue).toFixed(2);}
 }
 
-function aplicarCuponDescuento(){}
+
+
+const isCouponValueValid =  (value) => coupons[value] !== undefined ? true : false;
+
+function aplicarCuponDescuento(){
+    const inputCoupon = document.getElementById("InputCoupon");
+    const couponValue = inputCoupon.value
+    const inputDiscount = document.getElementById("InputDiscount")
+    inputDiscount.value = coupons.couponValue;
+
+    console.log(couponValue, coupons.couponValue, isCouponValueValid(couponValue), coupons['CUPON30'] )
+
+    if (!userCoupon) {
+        couponAlert.innerHTML = "El cupón " + couponValue + "no es válido"
+    }
+    
+}

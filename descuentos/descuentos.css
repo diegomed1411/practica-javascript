@@ -46,7 +46,7 @@ textarea {
 
 form {
   padding: 37.5px;
-  margin: 50px 0;
+  margin: 50px 0px 15px 0px;
 }
 
 h1 {
@@ -120,8 +120,25 @@ input[type='number']:focus, input[type='text']:focus {
 	width: 100%;
 }
 
-.coupon {
-	width: 70%;
+.couponBox{
+  display: flex;
+}
+.coupon{
+	width: 60%;
+}
+
+.couponAlertBox {
+	width: 40%;
+  justify-content: center;
+}
+
+.couponAlert p, #resultadoDescuento{
+  text-align: center;
+  color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 
@@ -149,7 +166,6 @@ select::-ms-expand {
   }
 
 #resultadoDescuento {
-    font-size: 25;
     font-weight: bold;
 }
 

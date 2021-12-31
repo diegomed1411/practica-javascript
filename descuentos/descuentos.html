@@ -79,6 +79,7 @@
           />
         </div>
 
+        <div class="couponBox">
         <div class="coupon">
             <label for="InputCoupon"></label>
             <input
@@ -86,9 +87,13 @@
               placeholder="Ingrese cupon"
               name="InputCoupon"
               id="InputCoupon"
+              onchange="aplicarCuponDescuento()"
             />
           </div>
-
+          <div class="couponAlertBox">
+          <p id="couponAlert"></p>
+        </div>
+        </div>
         <div class="submit">
           <button type="button" id="form_button" onclick="calcularPrecioConDescuento()">Calcular el precio con descuento</button>
         </div>
