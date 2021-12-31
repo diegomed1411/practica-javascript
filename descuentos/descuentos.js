@@ -8,11 +8,11 @@ function isEmpty(val){
 
 //----------------------------------------------------------------------------------------------------
 //incorporando cupones
-const coupons={
-    'CUPON15': 15,
-    'CUPON30': 30,
-    'CUPON45': 45,
-}
+const listaCupones = {
+    cupon1: 10,
+    cupon2: 15,
+    cupon3: 20,
+ }; 
 // Interaccion con HTML y cáclulo 
 
 function calcularPrecioConDescuento(){
@@ -29,19 +29,21 @@ function calcularPrecioConDescuento(){
 }
 
 
-
-const isCouponValueValid =  (value) => coupons[value] !== undefined ? true : false;
-
-function aplicarCuponDescuento(){
-    const inputCoupon = document.getElementById("InputCoupon");
-    const couponValue = inputCoupon.value
+function descuentoDelCupon() {
+    const nombreCupon = document.getElementById("InputCoupon").value
+    const cuponDefault = 0;
+    const cuponDescuento = listaCupones[nombreCupon] || cuponDefault;
     const inputDiscount = document.getElementById("InputDiscount")
-    inputDiscount.value = coupons.couponValue;
-
-    console.log(couponValue, coupons.couponValue, isCouponValueValid(couponValue), coupons['CUPON30'] )
-
-    if (!userCoupon) {
-        couponAlert.innerHTML = "El cupón " + couponValue + "no es válido"
+    inputDiscount.value = cuponDescuento
+    if (cuponDescuento == 0){
+        alert("Ups... el cupon ingresado no tiene descuento")
+    } else {
+        alert("Felicitaciones tienes un descuento de "+cuponDescuento+"%")
     }
-    
-}
+ } 
+
+ // cuando se ingresa descuento manual se debe borrar el cupon ingresado ya que no aplica cupon automatico 
+ function cleanCoupon(){
+    const inputCoupon = document.getElementById("InputCoupon")
+    inputCoupon.value = ""
+ }

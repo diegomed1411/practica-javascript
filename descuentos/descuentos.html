@@ -76,6 +76,7 @@
             placeholder="Porcentaje de descuento"
             name="discount"
             id="InputDiscount"
+            onchange="cleanCoupon()"
           />
         </div>
 
@@ -87,11 +88,11 @@
               placeholder="Ingrese cupon"
               name="InputCoupon"
               id="InputCoupon"
-              onchange="aplicarCuponDescuento()"
+              onchange="descuentoDelCupon()"
             />
           </div>
-          <div class="couponAlertBox">
-          <p id="couponAlert"></p>
+          <div class="couponButtonLoadBox">
+            <button type="button" id="coupon_button" onclick="descuentoDelCupon()">Cargar Cupon</button>
         </div>
         </div>
         <div class="submit">
