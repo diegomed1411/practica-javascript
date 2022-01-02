@@ -10,6 +10,40 @@
 <body>
     <main>
         
+        <div class="login-box">
+            <h2>Calcula Promedio, Mediana y Moda</h2>
+            <form>
+              <div class="user-box">
+                <input type="text" name="InputNumeros" id= "InputNumeros" required>
+                <label>Lista de Numeros separados por coma</label>
+              </div>
+              <div class="buttonContainer">
+              <a onclick="procesarPromedio()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Promedio
+              </a>
+              <a onclick="procesarMediana()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Mediana
+              </a>
+              <a onclick="procesarModa()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Moda
+              </a>
+            </div>
+            <p id="resultado"></p>
+            </form>
+          </div>
+
     </main>
     <script src="./pmm.js"></script>
 </body>
